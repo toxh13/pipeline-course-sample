@@ -1,0 +1,63 @@
+site_name: "데이터 파이프라인 맛보기"
+site_url: https://toxh13.github.io/pipeline-course-sample/
+repo_url: https://github.com/toxh13/pipeline-course-sample
+docs_dir: docs
+theme:
+  name: material
+  language: ko
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      accent: teal
+      toggle: { icon: material/weather-night, name: 다크 모드 }
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: indigo
+      accent: teal
+      toggle: { icon: material/weather-sunny, name: 라이트 모드 }
+  features:
+    - navigation.instant
+    - navigation.tracking
+    - navigation.footer
+    - navigation.top
+    - toc.follow
+    - content.code.copy
+    - content.code.annotate
+    - content.tabs.link
+    - search.highlight
+
+extra_css:
+  - stylesheets/extra.css
+  - stylesheets/walk.css
+
+extra_javascript:
+  - javascripts/walk.js
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - md_in_html
+  - tables
+  - toc: { permalink: true }
+  - pymdownx.details
+  - pymdownx.highlight: { anchor_linenums: true, line_spans: __span }
+  - pymdownx.inlinehilite
+  - pymdownx.keys
+  - pymdownx.snippets: { base_path: [!relative $config_dir], check_paths: true }
+  - pymdownx.tabbed: { alternate_style: true }
+  - pymdownx.tasklist: { custom_checkbox: true }
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+
+nav:
+  - 강의 소개: index.md
+  - 0. 환경 구성: 00-setup.md
+  - 1. 데이터 파이프라인이란: 01-what-is-pipeline.md
+  - 치트시트: cheatsheet.md

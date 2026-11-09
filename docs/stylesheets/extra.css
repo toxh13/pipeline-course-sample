@@ -1,0 +1,54 @@
+/* 다이어그램을 가운데 정렬하고 넉넉하게 */
+.md-typeset .mermaid {
+  display: flex;
+  justify-content: center;
+  margin: 1.5em 0;
+}
+
+/* Mermaid 색: 차분한 인디고 노드 + 회색 엣지. 강조색(#e8590c)은 다이어그램 안에서
+   classDef / linkStyle 로 "논점이 되는 요소 하나"에만 쓴다.
+   Mermaid는 closed shadow root 안에 그려지므로 CSS 변수로만 바꿀 수 있다. */
+[data-md-color-scheme="default"] {
+  --md-mermaid-node-bg-color: #eef1fb;
+  --md-mermaid-node-fg-color: #3949ab;
+  --md-mermaid-edge-color: #5f6b7a;
+  --md-mermaid-label-fg-color: #2f3542;
+}
+
+[data-md-color-scheme="slate"] {
+  --md-mermaid-node-bg-color: rgba(140, 158, 255, 0.1);
+  --md-mermaid-node-fg-color: #a5b4fc;
+  --md-mermaid-edge-color: #9aa4b5;
+  --md-mermaid-label-fg-color: #dfe3ea;
+}
+
+/* 손으로 그린 SVG 다이어그램: 글자·선은 currentColor라 라이트/다크를 따라간다 */
+.md-typeset figure.diagram {
+  width: 100%;
+  margin: 1.5em auto;
+}
+
+.md-typeset figure.diagram svg {
+  width: 100%;
+  max-width: 30rem;
+  height: auto;
+  overflow: visible;
+}
+
+.md-typeset figure.diagram figcaption {
+  max-width: 30rem;
+  font-style: normal;
+  font-size: 0.68rem;
+  color: var(--md-default-fg-color--light);
+}
+
+/* 레슨 목표 박스 강조 */
+.md-typeset .admonition.abstract {
+  border-left-width: 0.3rem;
+}
+
+/* 한글 가독성 */
+.md-typeset {
+  line-height: 1.8;
+  word-break: keep-all;
+}

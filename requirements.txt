@@ -1,0 +1,4 @@
+# Keep this file ASCII-only: pip on Windows reads it with the system code page and fails on non-ASCII.
+mkdocs==1.6.1
+mkdocs-material==9.8.1
+pytest==9.2.0
